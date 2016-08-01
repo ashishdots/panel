@@ -9,7 +9,7 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 use Illuminate\Support\Facades\Input;
 
 class Admin extends Model implements AuthenticatableContract, CanResetPasswordContract {
-
+    use \HighIdeas\UsersOnline\Traits\UsersOnlineTrait;
     use Authenticatable, CanResetPassword;
     use HasRoles;
 	/**
